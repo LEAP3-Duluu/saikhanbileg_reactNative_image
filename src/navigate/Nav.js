@@ -2,6 +2,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home, ImageCon, ImageScreen, Map, Profile } from '../screens';
+import SuccessIcon from '../assets/SuccessIcon';
 
 const Tap = createBottomTabNavigator();
 
@@ -18,7 +19,14 @@ export const Nav = () => {
                 inactiveBackgroundColor: 'black'
             }}
         >
-            <Tap.Screen name="Home" component={Home} />
+            <Tap.Screen name="Home"
+                component={Home}
+                options={{
+                    tabBarLabel: 'hm',
+                    tabBarIcon: ({ color, size }) => (
+                        <SuccessIcon color={color} size={size} />
+                    ),
+                }} />
             <Tap.Screen name="Profile" component={Profile} />
             <Tap.Screen name="Image" component={ImageCon} />
             <Tap.Screen name="ImgPick" component={ImageScreen} />
