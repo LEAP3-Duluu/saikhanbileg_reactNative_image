@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Home, ImageCon, ImageScreen, Profile } from '../screens';
+import { Home, ImageCon, ImageScreen, Map, Profile } from '../screens';
 
 const Tap = createBottomTabNavigator();
 
@@ -22,6 +22,7 @@ export const Nav = () => {
             <Tap.Screen name="Profile" component={Profile} />
             <Tap.Screen name="Image" component={ImageCon} />
             <Tap.Screen name="ImgPick" component={ImageScreen} />
+            <Tap.Screen name="Map" component={Map} />
         </Tap.Navigator>
     )
 }

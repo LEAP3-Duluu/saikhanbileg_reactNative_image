@@ -5,3 +5,4 @@ export { Profile } from "./Profile";
 export { SplashScreen } from "./SplashScreen";
 export { LoginScreen } from "./LoginScreen";
 export { ImageScreen } from "./ImageScreen";
+export { Map } from "./Map";
